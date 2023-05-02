@@ -1,9 +1,9 @@
 
 
 
-let randomNumber = [];
+const randomNumber = [];
 while (randomNumber.length < 5) {
-    let nuovonumero = getRandomNumber(1, 5);
+    const nuovonumero = getRandomNumber(1, 5);
     if (randomNumber.includes(nuovonumero)) {
     } else{
         randomNumber.push(nuovonumero)
@@ -19,7 +19,10 @@ setTimeout(function () {
     
     const numeriUtente = domanda();
 
-    console.log("Numeri Utente: ",numeriUtente)
+    const numeriIndovinati = confronto();
+
+    
+
 
     
 }, 4 * 1000);
@@ -50,7 +53,22 @@ function getRandomNumber(min, max) {
     return Math.floor(Math.random() * ((max + 1) - min) + min)
 }
 
+function confronto(numeriUtente, randomNumber) {
 
+    const indovinati = [];
+
+    for (let i = 0; i < randomNumber.length; i++) {
+        const currentNumber = randomNumber[i];
+
+        if (numeriUtente.includes(currentNumber)) {
+            indovinati.push(currentNumber)
+        }
+        
+    }
+
+    return indovinati;
+
+}
 
 
 
