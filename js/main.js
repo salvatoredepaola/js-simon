@@ -19,7 +19,8 @@ setTimeout(function () {
     
     const numeriUtente = domanda();
 
-    console.log(numeriUtente)
+    console.log("Numeri Utente: ",numeriUtente)
+
     
 }, 4 * 1000);
 
@@ -40,7 +41,6 @@ function domanda() {
         }
 
     }
-    console.log("Numeri Utente: ",numeriUtente)
 
     return numeriUtente;
 
