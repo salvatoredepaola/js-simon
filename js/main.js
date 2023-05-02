@@ -19,9 +19,12 @@ setTimeout(function () {
     
     const numeriUtente = domanda();
 
-    const numeriIndovinati = confronto();
+    const numeriIndovinati = confronto(randomNumber, numeriUtente);
 
-    
+    console.log("Numeri indovinati: ", numeriIndovinati);
+
+    document.getElementById("randomNumber").innerText = numeriIndovinati;
+
 
 
     
@@ -44,6 +47,8 @@ function domanda() {
         }
 
     }
+
+    console.log("Numeri Utente: ", numeriUtente)
 
     return numeriUtente;
 
